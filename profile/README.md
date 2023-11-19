@@ -10,7 +10,7 @@ Platform in this project collects data from sensors which are placed in the Habe
 
 The platform is composed in AWS CloudFormation specification. So, if you want to run this application you have to run CloudFormation specification and deploy all the modules. After usage, you can delete CloudFormation stack to save costs.
 
-![Haber Process](haber_process.png)
+![Haber Process](profile/haber_process.png)
 
 ### Business logic
 
