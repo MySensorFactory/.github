@@ -18,7 +18,7 @@ This platform collects data from sensors and passes it to streams so that the da
 
 On the platform there is user management system. Users may log in, create and get data reports from given sensor with given label. Data report consists of data, sensor type, time range, event key and sensor type. On the platform are built-in ADMIN users who can create other users. Users are equipped in roles. So there are several kind of users. For example there may be users who only may get reports or only may create reports.
 
-![Microservices](microservices.png)
+![Microservices](profile/microservices.png)
 
 ### Cluster
 
@@ -26,7 +26,7 @@ This project consists of microservices which are placed on Kubernetes cluster. K
 
 Access to public endpoints are performed by node ports and AWS Application Load Balancer.
 
-![Cluster Access](cluster_access.png)
+![Cluster Access](profile/cluster_access.png)
 
 But there is possibility to get access to cluster endpoints by ingress controller.
 
@@ -40,7 +40,7 @@ Further inside the Kubernetes cluster data is published on Kafka cluster and fur
 
 Spring Boot Cloud allows us to collect data from SQS queue and pass it to internal cluster.
 
-![Data Flow](data_flow.png)
+![Data Flow](profile/data_flow.png)
 
 ### CICD mechanism
 
@@ -56,7 +56,7 @@ All secrets are stored in AWS Parameter Store and are passed to sufficient confi
 
 On the cluster is present `deployer` daemon process which handles deployments events from SNS topic, executes all the manifests for certain module and then performs deployment. If an application exists before event handling then application rollback is performed and further newer version is deployed.
 
-![CICD Process](cicd_process.png)
+![CICD Process](profile/cicd_process.png)
 
 ### Projects that are part of the platform
 
